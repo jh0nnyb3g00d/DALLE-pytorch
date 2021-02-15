@@ -117,7 +117,7 @@ for lin in lf:
     tokens = tokenizer(txt)
     codes = []
     for t in tokens:
-        #print(t)
+        print(t)
         if t=="":
             continue
         codes.append(vocab.to_index(t))
