@@ -121,7 +121,7 @@ for lin in lf:
         if t=="":
             continue
         codes.append(vocab.to_index(t))
-    print(fn, codes)
+#     print(fn, codes)
     data.append((fn, codes))
 
 
