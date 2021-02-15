@@ -117,7 +117,7 @@ for lin in lf:
     tokens = tokenizer(txt)
     codes = []
     for t in tokens:
-        print(t)
+#         print(t)
         if t=="":
             continue
         codes.append(vocab.to_index(t))
@@ -182,7 +182,7 @@ for epoch in range(start_epoch, start_epoch+n_epochs):
     for imgfn in i:       # iterate through image paths in minibatch
 
         # note: images are expected to be in ./imagefolder/0/
-        img_t = read_image(opt.dataPath+"/0/"+imgfn).float()/255.   # read image and scale into float 0..1
+        img_t = read_image(opt.dataPath+"/"+imgfn).float()/255.   # read image and scale into float 0..1
         img_t = tf(img_t)  # normalize 
         images[ix,:,:,:] = img_t 
         ix += 1
